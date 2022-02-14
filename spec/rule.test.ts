@@ -43,8 +43,8 @@ describe('Rule', () => {
     describe('Colorize', () => {
       const rule = new Rule('/.*/', data);
       // rule.data.thresholds = [50, 80];
-      rule.addThreshold(undefined, "COLOR1", 50);
-      rule.addThreshold(undefined, "COLOR2", 80);
+      rule.addThreshold(undefined, 'COLOR1', 50);
+      rule.addThreshold(undefined, 'COLOR2', 80);
       const shape = rule.addShapeMap(pattern);
 
       test('isEligible always ERR should be true', () => {

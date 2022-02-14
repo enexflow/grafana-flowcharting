@@ -76,6 +76,7 @@ module.exports = {
   },
 
   decode(data, encode, deflate, base64) {
+    console.log('test');
     try {
       const node = this.parseXml(data).documentElement;
 
@@ -91,7 +92,7 @@ module.exports = {
     }
 
     if (base64) {
-      data = atob(data);
+      data = Buffer.from(data, 'base64');
     }
 
     if (deflate && data.length > 0) {
@@ -182,7 +183,14 @@ module.exports = {
   },
 
   matchString(str, pattern, regex = true) {
-    if (str === null || str === undefined || pattern === null || pattern === undefined || str.length === 0 || pattern.length === 0) {
+    if (
+      str === null ||
+      str === undefined ||
+      pattern === null ||
+      pattern === undefined ||
+      str.length === 0 ||
+      pattern.length === 0
+    ) {
       return false;
     }
     if (str === pattern) {
@@ -235,7 +243,7 @@ module.exports = {
 
   loadJS(fname) {
     try {
-      var code = this.loadFile(fname)
+      var code = this.loadFile(fname);
       if (code) {
         this.evalRaw(code);
         // console.info('LoadJS called succesfully', fname);

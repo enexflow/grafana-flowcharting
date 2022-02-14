@@ -93,7 +93,7 @@ describe('$GF', () => {
           align: 'center',
           sort: 'asc',
           select: false,
-        },
+        }  as const,
         {
           index: 1,
           id: 'name',
@@ -103,7 +103,7 @@ describe('$GF', () => {
           align: 'center',
           sort: 'asc',
           select: false,
-        },
+        } as const,
         {
           index: 2,
           id: 'type',
@@ -112,7 +112,7 @@ describe('$GF', () => {
           width: '30px',
           sort: 'asc',
           select: false,
-        },
+        } as const,
       ],
     };
 
