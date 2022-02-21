@@ -31,11 +31,11 @@
   "devDependencies": {
     "@angular/core": "^10.2.1",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
-    "@grafana/data": "7.3.1",
+    "@grafana/data": "7.5.14",
     "@grafana/eslint-config": "1.0.0-rc1",
-    "@grafana/runtime": "7.3.1",
-    "@grafana/toolkit": "7.3.1",
-    "@grafana/ui": "7.3.1",
+    "@grafana/runtime": "7.5.14",
+    "@grafana/toolkit": "7.5.14",
+    "@grafana/ui": "7.5.14",
     "@types/angular": "1.6.56",
     "@types/chartist": "^0.9.46",
     "@types/chroma-js": "^2.0.0",
@@ -84,5 +84,8 @@
     "ts-loader": "^6.2.1",
     "tslint-config-airbnb": "^5.11.2",
     "typescript": "^3.7.2"
+  },
+  "engines": {
+    "node": ">=14 && <16"
   }
 }

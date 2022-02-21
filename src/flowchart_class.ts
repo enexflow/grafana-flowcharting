@@ -154,7 +154,7 @@ export class Flowchart {
    */
   updateStates(rules: Rule[]): this {
     const trc = $GF.trace.before(this.constructor.name + '.' + 'updateStates()');
-    rules.forEach(rule => {
+    rules.forEach((rule) => {
       if (this.stateHandler !== undefined) {
         rule.states = this.stateHandler.getStatesForRule(rule);
         if (rule.states) {
